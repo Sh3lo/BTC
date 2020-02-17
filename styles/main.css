@@ -621,6 +621,7 @@ body {
     display: none;
   }
   .header {
+    overflow: hidden;
     position: relative;
     display: block;
     padding: 4vw;
