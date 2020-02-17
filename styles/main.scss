@@ -726,6 +726,7 @@ hr{
             width: 90vw;
             margin-bottom: 3vh;
             border-radius: 5px;
+            -webkit-border-radius:5px;
             iframe{
                 width: 90vw;
                 height: 30vh;
@@ -792,7 +793,7 @@ hr{
                     top:0;
                     display: block;
                     width: 100%;
-                    height: 250px;
+                    
                     transition: 400ms;
                     border-radius: 5px;
                 }
