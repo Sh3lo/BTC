@@ -630,11 +630,10 @@ body {
     height: 45vh;
     width: 100%;
   }
-  .header .hero::before {
+  .header .hero:before {
     z-index: 2;
     content: '';
     position: absolute;
-    background: white;
     bottom: -1px;
     left: 0;
     right: 0;
@@ -642,13 +641,12 @@ body {
     opacity: 0.6;
     -webkit-opacity: 0.6;
     clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
-    background: linear-gradient(to right, #ff7b00, #ffd000);
+    background-image: linear-gradient(to right, #ff7b00, #ffd000);
   }
-  .header .hero::after {
+  .header .hero:after {
     z-index: 3;
     content: '';
     position: absolute;
-    background: white;
     bottom: -1px;
     left: 0;
     right: 0;
@@ -656,7 +654,7 @@ body {
     opacity: 0.8;
     -webkit-opacity: 0.8;
     clip-path: polygon(100% 48%, 30% 100%, 100% 100%);
-    background: linear-gradient(to right, #ff7b00, #ff9900);
+    background-image: linear-gradient(to right, #ff7b00, #ff9900);
   }
   .header .header-bg {
     z-index: 1;
@@ -710,14 +708,12 @@ body {
     width: 90vw;
     margin-bottom: 3vh;
     border-radius: 5px;
-    -webkit-appearance: none;
     -webkit-border-radius: 5px;
   }
   .page-content .video iframe {
     width: 90vw;
     height: 30vh;
     border-radius: 5px;
-    -webkit-appearance: none;
     -webkit-border-radius: 5px;
   }
   .page-content .content {
@@ -780,6 +776,7 @@ body {
     top: 0;
     display: block;
     width: 100%;
+    height: 250px;
     transition: 400ms;
     border-radius: 5px;
   }
