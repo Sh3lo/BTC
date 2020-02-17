@@ -640,6 +640,7 @@ body {
     right: 0;
     height: 100%;
     opacity: 0.6;
+    -webkit-opacity: 0.6;
     clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
     background: linear-gradient(to right, #ff7b00, #ffd000);
   }
@@ -653,6 +654,7 @@ body {
     right: 0;
     height: 100%;
     opacity: 0.8;
+    -webkit-opacity: 0.8;
     clip-path: polygon(100% 48%, 30% 100%, 100% 100%);
     background: linear-gradient(to right, #ff7b00, #ff9900);
   }
@@ -708,12 +710,14 @@ body {
     width: 90vw;
     margin-bottom: 3vh;
     border-radius: 5px;
+    -webkit-appearance: none;
     -webkit-border-radius: 5px;
   }
   .page-content .video iframe {
     width: 90vw;
     height: 30vh;
     border-radius: 5px;
+    -webkit-appearance: none;
     -webkit-border-radius: 5px;
   }
   .page-content .content {
