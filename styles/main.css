@@ -628,7 +628,32 @@ body {
     height: 45vh;
     width: 100%;
   }
-  
+  .header .hero::before {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    background: white;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0.6;
+    clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
+    background: linear-gradient(to right, #ff7b00, #ffd000);
+  }
+  .header .hero::after {
+    z-index: 3;
+    content: '';
+    position: absolute;
+    background: white;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0.8;
+    clip-path: polygon(100% 48%, 30% 100%, 100% 100%);
+    background: linear-gradient(to right, #ff7b00, #ff9900);
+  }
   .header .header-bg {
     z-index: 1;
     position: absolute;
