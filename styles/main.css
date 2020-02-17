@@ -718,19 +718,180 @@ body {
     text-align: justify;
   }
   .page-content .content h5 {
-    font-size: 1.5rem;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1;
     color: #3cd8ff;
-    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-align: left;
   }
   .page-content .content p {
     margin-top: 0;
   }
   .page-content .photos {
-    display: none;
+    display: block;
+    position: relative;
+    align-items: center;
+    text-align: justify;
+    left: 5vw;
+    width: 90vw;
+  }
+  .page-content .photos .title-photos {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .page-content .photos h1 {
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1;
+    color: #3cd8ff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .page-content .photos h2 {
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .page-content .photos .photo {
+    position: relative;
+    width: 75vw;
+    height: 500px;
+    z-index: 3;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: white;
+    text-align: justify;
+  }
+  .page-content .photos .photo img {
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 250px;
+    transition: 400ms;
+    border-radius: 5px;
+  }
+  .page-content .photos .photo .title {
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    bottom: 250px;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: right;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7) 50%);
+    padding: 40px 20px 20px;
+    font-size: 2rem;
+    opacity: 1;
+    transition: 500ms;
+  }
+  .page-content .photos .photo p {
+    position: absolute;
+    top: 250px;
+    text-align: center;
+    margin: 0;
+    padding: 2vh;
   }
   .faq {
-    display: none;
+    position: relative;
+    display: block;
+    background-color: white;
+    box-sizing: content-box;
+    padding-bottom: 2vh;
   }
+  .faq::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    height: 6vh;
+    width: 100%;
+    background-color: #f1f1f1;
+  }
+  .faq .faq-content {
+    top: -1vh;
+    position: relative;
+    padding: 5vw;
+  }
+  .faq h5 {
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1;
+    color: #3cd8ff;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  .faq p {
+    margin-top: 0;
+    font-family: 'Titillium Web', sans-serif;
+  }
+  .faq .faq-cards h1 {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .faq .faq-cards .faq-card {
+    border-radius: 5px;
+    background-color: white;
+    text-align: justify;
+  }
+  /*
+    .faq{
+    position: relative;
+    display: block;
+    background-color: white;
+    box-sizing: content-box;
+    padding-bottom: 10vh;
+    &::before{
+        content: '';
+        position: absolute;
+        top: -1px;
+        clip-path: polygon(0 0, 100% 100%, 100% 0);
+        height: 6vh;
+        width: 100%;
+        background-color: rgb(241, 241, 241);
+    }
+    .faq-content{
+        top: 7vh;
+        position: relative;
+        margin-left: 12.5vw;
+        width: 80vw;
+    }
+    h5{
+        font-family: 'Titillium Web', sans-serif;
+        line-height: 1;
+        color: rgb(60, 216, 255);
+        font-size: 2.3rem;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    p{
+        margin-top: 0;
+        font-family: 'Titillium Web', sans-serif;
+    }
+    .faq-cards{
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .faq-card{
+            width: 20vw;
+            min-width: 295px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: white;
+            text-align: justify;
+            margin-right: 7%;
+        }
+    }
+}
+    */
   .log {
     display: none;
   }
