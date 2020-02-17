@@ -641,6 +641,7 @@ body {
     opacity: 0.6;
     -webkit-opacity: 0.6;
     clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
+    -webkit-clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
     background-image: linear-gradient(to right, #ff7b00, #ffd000);
   }
   .header .hero::after {
@@ -654,6 +655,7 @@ body {
     opacity: 0.8;
     -webkit-opacity: 0.8;
     clip-path: polygon(100% 48%, 30% 100%, 100% 100%);
+    -webkit-clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
     background-image: linear-gradient(to right, #ff7b00, #ff9900);
   }
   .header .header-bg {
@@ -886,6 +888,7 @@ body {
     height: 100%;
     opacity: 0.6;
     clip-path: polygon(90% 0, 100% 0, 100% 100%, 63% 100%);
+    -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 63% 100%);
   }
   .log .login-box::after {
     z-index: 3;
@@ -898,6 +901,7 @@ body {
     height: 110%;
     opacity: 0.8;
     clip-path: polygon(100% 34%, 55% 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 34%, 55% 100%, 100% 100%);
   }
   .log .login-box h2 {
     padding: 0;

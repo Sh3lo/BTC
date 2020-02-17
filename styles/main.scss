@@ -661,6 +661,7 @@ hr{
                 opacity: 0.6;
                 -webkit-opacity: 0.6;
                 clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
+                -webkit-clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
                 background-image: linear-gradient(to right, rgb(255, 123, 0), rgb(255, 208, 0));
             }
             &::after{
@@ -674,6 +675,7 @@ hr{
                 opacity: 0.8;
                 -webkit-opacity: 0.8;
                 clip-path: polygon(100% 48%, 30% 100%, 100% 100%);
+                -webkit-clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
                 background-image: linear-gradient(to right, rgb(255, 123, 0), rgb(255, 153, 0));
             }
         }
@@ -910,6 +912,7 @@ hr{
                 height: 100%;
                 opacity: 0.6;
                 clip-path: polygon(90% 0, 100% 0, 100% 100%, 63% 100%);
+                -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 63% 100%);
             }
             &::after{
                 z-index: 3;
@@ -922,6 +925,7 @@ hr{
                 height: 110%;
                 opacity: 0.8;
                 clip-path: polygon(100% 34%, 55% 100%, 100% 100%);
+                -webkit-clip-path: polygon(100% 34%, 55% 100%, 100% 100%);
             }
             h2 {
                 padding: 0;
