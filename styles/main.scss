@@ -159,10 +159,12 @@ body{
         height: 60vh;
         min-height: 330px;
         border-radius: 5px;
+        -webkit-border-radius: 5px;
         iframe{
             width: 94vw;
             height: 60vh;
             border-radius: 5px;
+            -webkit-border-radius: 5px;
         }
     }
     .content{
@@ -726,11 +728,12 @@ hr{
             width: 90vw;
             margin-bottom: 3vh;
             border-radius: 5px;
-            -webkit-border-radius:5px;
+            -webkit-border-radius: 5px;
             iframe{
                 width: 90vw;
                 height: 30vh;
                 border-radius: 5px;
+                -webkit-border-radius: 5px;
             }
         }
         padding: 0;
