@@ -383,7 +383,6 @@ body{
         }
     }
 }
-
 .log{
     position: relative;
     display: block;
@@ -584,10 +583,10 @@ footer {
     font-size: 0.7rem;
     height: 15vh;
     overflow: hidden;
-}
-footer img{
+    img{
     height: 10vh;
     margin-top: 1vh;
+    }
 }
 hr{
     border-image-source: linear-gradient( rgb(255, 123, 0), rgb(255, 208, 0));
@@ -651,7 +650,7 @@ hr{
         height: 45vh;
         width: 100%;
         .hero{
-            &:before{
+            &::before{
                 z-index: 2;
                 content: '';
                 position: absolute;
@@ -664,7 +663,7 @@ hr{
                 clip-path: polygon(75% 0, 100% 0, 100% 100%, 45% 100%);
                 background-image: linear-gradient(to right, rgb(255, 123, 0), rgb(255, 208, 0));
             }
-            &:after{
+            &::after{
                 z-index: 3;
                 content: '';
                 position: absolute;
@@ -763,6 +762,7 @@ hr{
             text-align: justify;
             left: 5vw;
             width: 90vw;
+            padding-bottom: 5vh;
             .title-photos{
                 position: relative;
                 top:0;
@@ -871,62 +871,195 @@ hr{
             }
         }
     }
-    /*
-    .faq{
-    position: relative;
-    display: block;
-    background-color: white;
-    box-sizing: content-box;
-    padding-bottom: 10vh;
-    &::before{
-        content: '';
-        position: absolute;
-        top: -1px;
-        clip-path: polygon(0 0, 100% 100%, 100% 0);
-        height: 6vh;
-        width: 100%;
-        background-color: rgb(241, 241, 241);
-    }
-    .faq-content{
-        top: 7vh;
+    .log{
         position: relative;
-        margin-left: 12.5vw;
-        width: 80vw;
-    }
-    h5{
-        font-family: 'Titillium Web', sans-serif;
-        line-height: 1;
-        color: rgb(60, 216, 255);
-        font-size: 2.3rem;
-        font-weight: 500;
-        margin-bottom: 0;
-    }
-    p{
-        margin-top: 0;
-        font-family: 'Titillium Web', sans-serif;
-    }
-    .faq-cards{
-        display: flex;
-        position: relative;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .faq-card{
-            width: 20vw;
-            min-width: 295px;
-            display: inline-block;
-            border-radius: 5px;
+        display: block;
+        height: 80vh;
+        background-color: rgb(27, 27, 27);
+        .log-bg{
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/tlobtck.jpg);
+            background-size: cover;
+            overflow: hidden;
+            opacity: 0.1;
+        }
+        .login-box {
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             background-color: white;
-            text-align: justify;
-            margin-right: 7%;
+            width: 90vw;
+            box-shadow: 0 25px 35px rgba(black, 0.15);
+            box-sizing: border-box;
+            padding: 5vh 5vh 7vh;
+            border-radius: 5px;
+            text-align: center;
+            &::before{
+                z-index: 2;
+                content: '';
+                position: absolute;
+                background: linear-gradient(to right, rgb(255, 123, 0), rgb(255, 208, 0));
+                top: -1px;
+                left: 0;
+                right: -1px;
+                height: 100%;
+                opacity: 0.6;
+                clip-path: polygon(90% 0, 100% 0, 100% 100%, 63% 100%);
+            }
+            &::after{
+                z-index: 3;
+                content: '';
+                position: absolute;
+                background: linear-gradient(to right, rgb(255, 123, 0), rgb(255, 153, 0));
+                bottom: -1px;
+                left: 0;
+                right: -1px;
+                height: 110%;
+                opacity: 0.8;
+                clip-path: polygon(100% 34%, 55% 100%, 100% 100%);
+            }
+            h2 {
+                padding: 0;
+                margin: 0 0 0 0;
+                font-size: 1.4rem;
+                color: rgb(60, 216, 255);
+            }
+            p {
+                margin: 0;
+                font-size: 0.8rem;
+                color: lighten(#333, 30%);
+            }
+            img{
+                display: none;
+            }
+        }
+        .form {
+            position: relative;
+            z-index: 6;
+            display: block;
+            .form--input-box {
+                position: relative;
+                text-align: left;
+                margin: 0 0 3vh;
+                &::after,
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background: rgba(0, 0, 0, 0.1);
+                }
+                &::before {
+                    background-image: linear-gradient(to right, rgb(255, 123, 0), rgb(255, 208, 0));
+                    right: 100%;
+                    z-index: 2;
+                    transition: right 500ms;
+                }
+                input {
+                    width: 100%; 
+                    border: none;
+                    background-color: transparent;
+                    font-size: 1.2rem;
+                    line-height: 1.9;
+                    outline: transparent;
+                    margin-top: 2vh;     
+                }
+                label {
+                    position: absolute;
+                    top: 23px;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: top 200ms, font-size 200ms;
+                }
+                &.focused {
+                    &::before {
+                        right: 0;
+                    }
+        
+                    &:not(.active) label {
+                        top: 0;
+                        font-size: 0.7rem;
+                    }
+                }
+                &.active {
+                    label {
+                        top: 0;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+            .form--options {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1.5fr;
+                font-size: 0.7rem;
+                text-align: left;
+                a{
+                    text-decoration: none;
+                    color: rgb(255, 147, 46);
+                    transition: 300ms;
+                }
+                a:hover{
+                    color: rgb(60, 216, 255);
+                }
+                > div:last-of-type {
+                    text-align: right;
+                }
+            }
+        }
+        .button {
+            border: none;
+            background-image: linear-gradient(to right, rgb(255, 123, 0), rgb(255, 208, 0));
+            color: white;
+            font-size: 1.2rem;
+            padding: 0 1vh;
+            line-height: 2.5;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 6vh;
+            outline: transparent;
+            box-shadow: 0 5px 10px rgba(black, 0.2);
+        
+            &--block {
+                display: block;
+                width: 100%;
+            }
+        }
+        .log-bottom{
+            display: none;
+            text-align: center;
+            margin: 0 0 0 0;
+            font-size: 1.4rem;
+            color: rgb(60, 216, 255);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10vh;
+            background-color: white;
         }
     }
-}
-    */
-    .log{
-        display: none;
-    }
-    footer{
-        display: none;
+    footer {
+        display: block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.7rem;
+        height: 15vh;
+        overflow: hidden;
+        img{
+        height: 10vh;
+        margin-top: 1vh;
+        }
     }
 }
